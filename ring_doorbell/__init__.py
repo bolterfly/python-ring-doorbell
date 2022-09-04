@@ -113,6 +113,19 @@ class Ring(object):
             timeout=timeout,
         )
 
+    def query_full(
+        self, api_url, url, method="GET", extra_params=None, data=None, json=None, timeout=None
+    ):
+        """Query data from Ring API."""
+        return self.auth.query(
+            api_url + url,
+            method=method,
+            extra_params=extra_params,
+            data=data,
+            json=json,
+            timeout=timeout,
+        )
+
     def devices(self):
         """Get all devices."""
         devices = {}
