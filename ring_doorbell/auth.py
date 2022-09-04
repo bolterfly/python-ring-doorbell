@@ -73,8 +73,9 @@ class Auth:
         if timeout is None:
             timeout = TIMEOUT
 
-        params = {"api_version": API_VERSION}
-
+        # params = {"api_version": API_VERSION}
+        params = dict()
+        
         if extra_params:
             params.update(extra_params)
 
